@@ -1,41 +1,20 @@
-# vite-plugin-vue2
+# vite-plugin-router-resolve
 
 ## Usage
 
-- run `yarn add vite-plugin-vue2 --dev`
+- run `yarn add vite-plugin-router-resolve --dev`
 - add the plugin into `vite.config.js`
 ``` js
 // vite.config.js
-const { createVuePlugin } = require('vite-plugin-vue2')
+const { createResolvePlugin } = require('vite-plugin-router-resolve')
 
 module.exports = {
-  plugins: [createVuePlugin(/*options*/)],
+  plugins: [createResolvePlugin(/*options*/)],
 }
 ```
 
-## [Options](https://github.com/underfin/vite-plugin-vue2/blob/master/src/index.ts#L26)
-
-### `vueTemplateOptions`
-
-Type: `Object`<br>
-Default: `null`
-
-The options for `@vue/component-compiler-utils`.
-
-### `jsx`
-
-Type: `Boolean`<br>
-Default: `false`
-
-The options for jsx transform.
-
-### `jsxOptions`
-
-Type: `Object`<br>
-
-The options for `@vue/babel-preset-jsx`.
+## [Options](https://github.com/fgoll/vite-plugin-router-resolve/blob/master/src/index.ts#L4)
 
 ## Todo
 
-- SSR Build
-- Sourcemap
+- ts parser
