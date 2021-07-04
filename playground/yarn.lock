@@ -80,6 +80,11 @@
     "@vue/compiler-dom" "3.1.4"
     "@vue/shared" "3.1.4"
 
+"@vue/devtools-api@^6.0.0-beta.14":
+  version "6.0.0-beta.15"
+  resolved "https://registry.nlark.com/@vue/devtools-api/download/@vue/devtools-api-6.0.0-beta.15.tgz?cache=0&sync_timestamp=1624900801887&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fdevtools-api%2Fdownload%2F%40vue%2Fdevtools-api-6.0.0-beta.15.tgz#ad7cb384e062f165bcf9c83732125bffbc2ad83d"
+  integrity sha1-rXyzhOBi8WW8+cg3MhJb/7wq2D0=
+
 "@vue/reactivity@3.1.4":
   version "3.1.4"
   resolved "https://registry.nlark.com/@vue/reactivity/download/@vue/reactivity-3.1.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Freactivity%2Fdownload%2F%40vue%2Freactivity-3.1.4.tgz#d926ed46fb0d48582ccf8665b062d37b5d35ba99"
@@ -593,6 +598,13 @@ vite@^2.3.8:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue-router@4:
+  version "4.0.10"
+  resolved "https://registry.nlark.com/vue-router/download/vue-router-4.0.10.tgz#ec8fda032949b2a31d3273170f8f376e86eb52ac"
+  integrity sha1-7I/aAylJsqMdMnMXD483bobrUqw=
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.14"
 
 vue-tsc@^0.0.24:
   version "0.0.24"

@@ -7,6 +7,10 @@ export default defineConfig({
   plugins: [
     createResolvePlugin({
       path: 'src/router/index.js',
+      target: 'menus',
+      callback: (routes) => {
+        console.log('callback', routes)
+      },
     }),
     vue(),
   ],

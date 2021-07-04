@@ -839,15 +839,15 @@ acorn-walk@^7.1.1:
   resolved "https://registry.nlark.com/acorn-walk/download/acorn-walk-7.2.0.tgz#0de889a601203909b0fbe07b8938dc21d2e967bc"
   integrity sha1-DeiJpgEgOQmw++B7iTjcIdLpZ7w=
 
+acorn@8.4.1, acorn@^8.2.4:
+  version "8.4.1"
+  resolved "https://registry.nlark.com/acorn/download/acorn-8.4.1.tgz#56c36251fc7cabc7096adc18f05afe814321a28c"
+  integrity sha1-VsNiUfx8q8cJatwY8Fr+gUMhoow=
+
 acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.nlark.com/acorn/download/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=
-
-acorn@^8.2.4:
-  version "8.4.1"
-  resolved "https://registry.nlark.com/acorn/download/acorn-8.4.1.tgz#56c36251fc7cabc7096adc18f05afe814321a28c"
-  integrity sha1-VsNiUfx8q8cJatwY8Fr+gUMhoow=
 
 add-stream@^1.0.0:
   version "1.0.0"
