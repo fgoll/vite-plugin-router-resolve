@@ -47,11 +47,10 @@ export function createResolvePlugin(rawOptions: ViteOptions = {}): Plugin {
       if (isMatch) {
         const ext = path.extname(id)
 
-        if (ext === '.js') {
+        if (ext === '.js' || ext === '.ts') {
           routes = jsParse(code, targetMap)
-
-          console.log(routes)
         }
+
         const callback = rawOptions.callback || (() => {})
 
         callback(routes)

@@ -1,7 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Layout from ;
 
-const menus = [
+// import EmptyLayout from "@/layout/empty.vue";
+interface a {
+  a: string
+}
+
+const children: any[] = [
   {
     name: 'order',
     path: '/order',
@@ -18,6 +22,11 @@ const menus = [
       {
         name: 'order-list',
         path: 'list',
+        ssr: {
+          title: '列表',
+          keyword: 'keywords',
+          description: '描述',
+        },
         meta: {
           actived: 'order',
           name: '订单列表',
@@ -26,6 +35,7 @@ const menus = [
             active: 'iconcopy_outline',
           },
         },
+        // component: () => import("@/views/order/order-list/index.vue")
       },
       {
         name: 'order-detail',
@@ -34,11 +44,13 @@ const menus = [
           name: '订单详情',
         },
         hidden: true,
+        // component: () => import("@/views/order/order-detail/index.vue")
       },
       {
         name: 'service-detail',
         path: 'service/detail/:id?',
         hidden: true,
+        // component: () => import("@/views/service/service-detail.vue")
       },
     ],
   },
@@ -49,6 +61,7 @@ const menus = [
       name: '交付管理',
     },
     redirect: '/delivery/list',
+    // component: EmptyLayout,
     children: [
       {
         name: 'delivery-list',
@@ -61,6 +74,8 @@ const menus = [
             active: 'iconConfirmreceipt_default',
           },
         },
+        // component: () =>
+        //     import("@/views/delivery/delivery-list/index.vue")
       },
     ],
   },
@@ -71,14 +86,25 @@ export const routes = [
     name: 'defaultLayout',
     path: '/',
     // component: () => import("@/layout/index.vue"),
-    children: menus,
+    redirect: '/order',
+    children,
   },
 ]
 
+export const menus = children.map((item) => item.children).flat()
+
+console.log(menus)
+
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.VITE_ROUTE_BASE as string),
   routes, // short for `routes: routes`
+})
+
+router.beforeEach((to, from, next) => {
+  // eslint-disable-next-line no-new
+
+  next()
 })
 
 export default router

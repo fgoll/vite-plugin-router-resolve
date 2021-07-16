@@ -6,8 +6,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
     createResolvePlugin({
-      path: 'src/router/index.js',
-      target: 'menus',
+      path: 'src/router/index2.ts',
+      target: 'children',
       callback: (routes) => {
         console.log('callback', routes)
       },

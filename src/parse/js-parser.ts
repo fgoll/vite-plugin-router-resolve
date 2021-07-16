@@ -11,6 +11,7 @@ interface AcornNode extends Node {
   declaration?: AcornNode
   declarations: AcornNode[]
   elements: AcornNode[]
+  properties: any[]
 }
 
 const traverse = function (node: AcornNode, routes: any[]) {
